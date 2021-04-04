@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Диана Михайлова](https://up.htmlacademy.ru/adaptive/22/user/1014205).
-* Наставник: [Артём Михайлов] (https://htmlacademy.ru/profile/id327277).
+* Наставник: [Артём Михайлов](https://htmlacademy.ru/profile/id327277).
 
 ---
 
