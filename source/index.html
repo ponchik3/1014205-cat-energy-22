@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=214, initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css\style.css">
   </head>
   <body class="page__body">
     <header class="page__header main-header">
       <div class="page__logo logo">
         <div class="logo__wrapper">
           <a class="logo__link">
-            <img src="img/logo-mobile.svg" width="33" alt="Логотип">
+            <img src="img/logo-mobile.svg" width="33px" alt="Логотип">
           </a>
-          <p>CAT ENERGY<p>
+          <img class="logo__title" src="img/footer-logo.svg" width="101px" alt="CAT ENERGY">
         </div>
       </div>
       <nav class="main-nav">
@@ -52,7 +53,7 @@
           <ul class="catalogs__list">
             <li class="catalogs__item">
               <h3 class="catalogs__title">ПОХУДЕНИЕ</h3>
-              <p class="catalogs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пра на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+              <p class="catalogs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="catalogs__link" href="#">КАТАТОГ SLIM</a>
             </li>
             <li class="catalogs__item">
@@ -86,31 +87,36 @@
         <div class="example__wrapper">
           <h2 class="example__header">Живой пример</h2>
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__result">5 КГ
-            <div class="example__result__label">снижение веса</div>
-          </div>
-          <div class="example__result">60 ДНЕЙ
-            <div class="example__result__label">затрачено времени</div>
+          <div class="example__flex-wrap">
+            <div class="example__result result">5 КГ
+              <div class="result__label">снижение веса</div>
+            </div>
+            <div class="example__result result">60 ДНЕЙ
+              <div class="result__label">затрачено времени</div>
+            </div>
           </div>
           <div class="example__cost">ЗАТРАТЫ НА ПИТАНИЕ: 15 000 РУБ.</div>
-          <form action="#" method="get">
-            <input type="range" min="1" max="10">
+          <form class="example__range" action="#" method="get">
+            <label>БЫЛО <input type="range" min="1" max="10"> СТАЛО</label>
           </form>
         </div>
       </section>
       <section class="page-main__contacts contacts">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты</h2>
-          <p>ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!</p>
-          <p>ул. Большая Конюшенная, д. 19/8</p>
-          <p>Санкт-Петербург</p>
+          <p class="contacts__left">ПРИГЛАШАЕМ <br>К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!</p>
+          <div class="contacts__right">
+            <p>ул. Большая Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </div>
         </div>
+        <img src="img/map.jpg" alt="карта">
       </section>
     </main>
     <footer class="page__footer main-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <p class="logo"><b>CAT</b> ENERGY</p>
+          <img src="img/footer-logo.svg" width="128px" alt="CAT ENERGY">
         </div>
         <div class="page-footer__social">
           <ul class="social__list">
