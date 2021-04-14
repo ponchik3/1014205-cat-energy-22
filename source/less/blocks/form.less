@@ -5,6 +5,7 @@
 }
 
 .form label {
+  display: flex;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -12,7 +13,6 @@
   color: #444444;
   margin: 0 20px;
   padding-bottom: 14px;
-  display: flex;
 }
 
 .form input::placeholder {
@@ -31,163 +31,6 @@ input[type="tel"] {
   flex-grow: 1;
 }
 
-.program {
-  border: 0;
-  padding: 0;
-}
-
-
-.program input[type="radio"] {
-  display: none;
-}
-
-.program label::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 16px;
-  position: relative;
-  background: url("../img/radiobutton.svg") no-repeat;
-}
-
-.program input[type="radio"]:checked {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 16px;
-  position: absolute;
-  top: -3px;
-  left: -5px;
-  background: url("../img/radiobutton-active.svg") no-repeat;
-}
-
-.program label {
-  line-height: 30px;
-  position: relative;
-  color: #222222;
-}
-
-.program::before {
-  position: relative;
-  height: 1px;
-  width: 320px;
-  content: "";
-  background: url("../img/Line320.svg") no-repeat;
-  display: block;
-  margin-top: 24px;
-  margin-bottom: 22px;
-  padding: 0;
-}
-
-.program::after {
-  position: relative;
-  height: 1px;
-  width: 320px;
-  content: "";
-  background: url("../img/Line320.svg") no-repeat;
-  display: block;
-  margin-top: 19px;
-  margin-bottom: 26px;
-  padding: 0;
-}
-
-.owner-contacts {
-  border: 0;
-  padding: 0;
-}
-
-.owner-contacts legend {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  display: block;
-  width: 187px;
-  margin-left: 20px;
-  margin-bottom: 35px;
-}
-
-.comment {
-  border: 0;
-  padding: 0;
-}
-
-.comment legend {
-  padding-top: 10px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  display: block;
-  width: 121px;
-  margin-left: 20px;
-  margin-bottom: 37px;
-}
-
-.comment textarea {
-  width: 278px;
-  height: 150px;
-  margin-left: 20px;
-  box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
-  padding: 10px 10px 10px 15px;
-  border: 1px solid #e7e7e7;
-}
-
-.extra {
-  border: 0;
-  padding: 0;
-}
-
-.extra legend {
-  padding-top: 22px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  display: block;
-  width: 141px;
-  margin-left: 20px;
-  margin-bottom: 34px;
-}
-
-.extra input[type="checkbox"] {
-  display: none;
-}
-
-.extra label::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 16px;
-  position: relative;
-  background: url("../img/checkbox.svg") no-repeat;
-}
-
-.extra input[type="checkbox"]:checked {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 16px;
-  position: absolute;
-  top: -3px;
-  left: -5px;
-  background: url("../img/checkbox-active.svg") no-repeat;
-}
-
-.extra label {
-  line-height: 30px;
-  position: relative;
-  color: #000000;
-}
-
 .form input[type="submit"] {
   display: block;
   width: 280px;
@@ -199,9 +42,9 @@ input[type="tel"] {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  color: #ffffff;
   text-align: center;
   position: relative;
   margin-top: 34px;

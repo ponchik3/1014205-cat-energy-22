@@ -1,0 +1,61 @@
+.program {
+  border: 0;
+  padding: 0;
+}
+
+
+.program input[type="radio"] {
+  display: none;
+}
+
+.program label::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  position: relative;
+  background: url("../img/radiobutton.svg") no-repeat;
+}
+
+.program input[type="radio"]:checked {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-right: 16px;
+  top: -3px;
+  left: -5px;
+  background: url("../img/radiobutton-active.svg") no-repeat;
+}
+
+.program label {
+  position: relative;
+  line-height: 30px;
+  color: #222222;
+}
+
+.program::before {
+  height: 1px;
+  width: 320px;
+  content: "";
+  position: relative;
+  background: url("../img/Line320.svg") no-repeat;
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 22px;
+  padding: 0;
+}
+
+.program::after {
+  height: 1px;
+  width: 320px;
+  content: "";
+  position: relative;
+  background: url("../img/Line320.svg") no-repeat;
+  display: block;
+  margin-top: 19px;
+  margin-bottom: 26px;
+  padding: 0;
+}
