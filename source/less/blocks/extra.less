@@ -1,0 +1,48 @@
+.extra {
+  border: 0;
+  padding: 0;
+}
+
+.extra legend {
+  padding-top: 22px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  display: block;
+  width: 141px;
+  margin-left: 20px;
+  margin-bottom: 34px;
+}
+
+.extra input[type="checkbox"] {
+  display: none;
+}
+
+.extra label::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  position: relative;
+  background: url("../img/checkbox.svg") no-repeat;
+}
+
+.extra input[type="checkbox"]:checked {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  background: url("../img/checkbox-active.svg") no-repeat;
+}
+
+.extra label {
+  line-height: 30px;
+  position: relative;
+  color: #000000;
+}
