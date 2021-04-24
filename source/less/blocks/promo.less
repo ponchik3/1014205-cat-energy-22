@@ -3,6 +3,18 @@
   height: 480px;
   position: relative;
   background: url("../img/cat.jpg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 100%;
+    height: 875px;
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    height: 587px;
+  }
 }
 
 .promo__wrapper {
@@ -12,17 +24,51 @@
   margin: 0;
   background: rgba(104, 183, 56, 0.85);
   background-size: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: none;
+    background-image: url("../img/can.svg");
+    background-repeat: no-repeat;
+    background-size: 709px 609px;
+    background-position: bottom;
+    background-position-x: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: none;
+  }
 }
 
 .promo__header {
   margin: 0;
   padding: 27px 20px 0 20px;
   font-family: "Oswald", sans-serif;
-  color: #ffffff;
   font-size: 36px;
-  font-style: normal;
   line-height: 36px;
+  font-style: normal;
+  font-weight: 400;
   text-align: center;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    max-width: 415px;
+    padding-left: 117px;
+    padding-top: 62px;
+    padding-right: 0;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
+    padding-top: 114px;
+  }
 }
 
 .promo__slogan {
@@ -34,6 +80,19 @@
   line-height: 14px;
   text-align: center;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 118px;
+    padding-top: 41px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
+  }
 }
 
 .promo__choose {
@@ -53,6 +112,22 @@
   text-align: center;
   color: #ffffff;
   background-color: #68b738;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    height: 54px;
+    padding: 14px auto;
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    margin-left: 112px;
+    top: 292px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 190px;
+    top: 346px;
+  }
 }
 
 .promo__choose::before {
@@ -64,4 +139,17 @@
   margin: 0 auto;
   content: "";
   background: url("../img/index-can-mobile.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 552px;
+    height: 499px;
+    bottom: -131px;
+    left: 368px;
+    background: url("../img/can-desktop.svg") no-repeat;
+  }
 }

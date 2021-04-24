@@ -1,5 +1,24 @@
 .principles {
   width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: none;
+  }
+}
+
+.principles__wrapper {
+  @media (min-width: @tablet-width) {
+    margin: 15px 100px 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 71px 100px 0 110px;
+  }
 }
 
 .principles__header {
@@ -9,12 +28,28 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .principles__list {
   display: block;
-  margin: 40px 0 46px 0;
+  margin: 72px 0 10px 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .principles__item {
@@ -27,4 +62,56 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    min-width: 230px;
+    max-width: 280px;
+    height: 280px;
+    margin: 0;
+    margin-bottom: 37px;
+    font-size: 16px;
+    line-height: 24px;
+    background: url("../img/1.svg") no-repeat;
+    background-size: auto 220px;
+    background-position-x: 65%;
+    background-position-y: 70%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.principles__item--two {
+  @media (min-width: @tablet-width) {
+    background: url("../img/2.svg") no-repeat;
+    background-size: auto 220px;
+    background-position-x: 65%;
+    background-position-y: 70%;
+  }
+}
+
+.principles__item--three {
+  @media (min-width: @tablet-width) {
+    background: url("../img/3.svg") no-repeat;
+    background-size: auto 220px;
+    background-position-x: 65%;
+    background-position-y: 70%;
+  }
+}
+
+.principles__item--four {
+  @media (min-width: @tablet-width) {
+    background: url("../img/4.svg") no-repeat;
+    background-size: auto 220px;
+    background-position-x: 65%;
+    background-position-y: 70%;
+  }
+}
+
+.principles__item p {
+  @media (min-width: @tablet-width) {
+    padding: 142px 29px 57px 0;
+  }
 }
