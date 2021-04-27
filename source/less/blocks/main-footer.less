@@ -11,6 +11,14 @@
 }
 
 .page-footer__wrapper {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    width: 280px;
+    height: 236px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -29,7 +37,6 @@
 .page-footer__logo img {
   display: block;
   margin: auto;
-  margin-top: 30px;
   padding-top: 39px;
   padding-bottom: 32px;
 
@@ -53,14 +60,19 @@
 }
 
 .social__list {
+  display: grid;
+  grid-template-columns: 23px 23px 23px;
+  column-gap: 32px;
   list-style: none;
-  margin: 0;
+  width: 130px;
+  margin: 0 auto;
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    width: 130px;
+    display: grid;
+    grid-template-columns: 29px 29px 29px;
+    column-gap: 29px;
+    width: 145px;
     height: 28px;
   }
 }
@@ -69,10 +81,8 @@
   display: block;
   width: 23px;
   height: 23px;
-  float: left;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-right: 34px;
 
   @media (min-width: @tablet-width) {
     width: 29px;
@@ -81,7 +91,6 @@
 }
 
 .social__link--vk {
-  margin-left: 87px;
   background-image: url("../img/social_icons.svg");
 
   @media (min-width: @tablet-width) {
@@ -115,10 +124,10 @@
 
 .social__list::after {
   display: block;
-  clear: both;
   width: 280px;
   height: 1px;
-  margin: 0 auto;
+  margin: 0;
+  margin-left: -75px;
   content: "";
   background: #d9d9d9 url("../img/Line280.svg") no-repeat;
 
@@ -130,7 +139,7 @@
 .copyright__link {
   display: block;
   margin-top: 28px;
-  margin-left: 19px;
+  margin-left: 0;
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   text-decoration: none;
@@ -159,7 +168,7 @@
   height: 34px;
   position: absolute;
   bottom: 48px;
-  right: 20px;
+  right: 0;
   content: "";
   background: url("../img/html-academy.svg") no-repeat;
 
