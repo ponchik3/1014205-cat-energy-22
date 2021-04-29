@@ -1,10 +1,31 @@
 .example {
-  width: 320px;
+  width: 100%;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 619px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    height: 667px;
+    background-color: #f2f2f2;
+  }
 }
 
 .example__wrapper {
-  padding: 27px 20px 31px 20px;
+  padding: 27px 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 31px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-right: 0;
+  }
 }
 
 .example__header {
@@ -15,6 +36,21 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+    padding-bottom: 76px;
+    padding-left: 110px;
+    background-color: #ffffff;
+  }
 }
 
 .example__description {
@@ -25,11 +61,49 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 63px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 70px;
+    padding-left: 110px;
+    padding-right: 860px;
+  }
 }
 
-.example__flex-wrap {
+.example__flex-wrap_result {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.example__flex-wrap_result-cost {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 930px;
+  }
 }
 
 .example__result {
@@ -45,9 +119,22 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 72px;
+    margin-top: 54px;
+    padding-top: 15px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
+  }
 }
 
-.result__label {
+.result div {
   display: block;
   width: 87px;
   height: 31px;
@@ -62,6 +149,29 @@
   line-height: 12px;
   text-align: center;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    width: 114px;
+    height: 27px;
+    top: 5px;
+    left: 22px;
+    padding: 7px;
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
+}
+
+.result:last-of-type div {
+  @media (min-width: @tablet-width) {
+    width: 142px;
+    left: 10px;
+  }
 }
 
 .example__cost {
@@ -72,24 +182,35 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 3;
+    margin-top: 65px;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 75px;
+    line-height: 20px;
+    text-align: left;
+  }
 }
 
-.example__cost::after {
-  display: block;
-  width: 311px;
-  height: 232px;
-  margin-top: 42px;
-  margin-left: -20px;
-  content: "";
-  background: #f2f2f2 url("../img/cat_fat.png") no-repeat;
-}
+.example__cost p {
+  margin: 0;
 
-.example__range {
-  margin-top: 27px;
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 330px;
+    margin-left: 0;
+    margin-bottom: 68px;
+  }
 }

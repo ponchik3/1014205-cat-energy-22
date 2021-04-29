@@ -1,0 +1,70 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  height: 362px;
+  position: relative;
+  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    height: 462px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 760px;
+    bottom: 462px;
+    margin-left: auto;
+  }
+}
+
+.slider__range::before {
+  display: block;
+  width: 311px;
+  height: 232px;
+  margin-bottom: 27px;
+  content: "";
+  background: #f2f2f2 url("../img/cat_fat.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 677px;
+    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    background: url("../img/cat-fat-big.png") no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 697px;
+    height: 536px;
+    bottom: 50px;
+    right: -40px;
+    margin: 0;
+  }
+}
+
+.slider__range {
+  position: absolute;
+  bottom: 31px;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    bottom: 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 571px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 70px;
+    right: 110px;
+  }
+}
