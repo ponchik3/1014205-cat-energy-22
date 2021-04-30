@@ -1,8 +1,18 @@
 .program {
   border: 0;
   padding: 0;
-}
 
+  @media (min-width: @tablet-width) {
+    margin: 52px 67px 0 71px;
+    padding: 25px 28px 13px 28px;
+    border: 1px solid #e7e7e7;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin: 0 110px 0 80px;
+  }
+}
 
 .program input[type="radio"] {
   display: none;
@@ -13,9 +23,17 @@
   width: 30px;
   height: 30px;
   position: relative;
+  margin-left: 20px;
   margin-right: 16px;
   content: "";
   background: url("../img/radiobutton.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 41px;
+    height: 40px;
+    margin-right: 20px;
+    background: url("../img/radiobutton-tablet.svg") no-repeat;
+  }
 }
 
 .program input[type="radio"]:checked {
@@ -24,16 +42,30 @@
   height: 30px;
   position: absolute;
   top: -3px;
-  left: -5px;
+  left: 15px;
   margin-right: 16px;
   content: "";
   background: url("../img/radiobutton-active.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 41px;
+    height: 40px;
+    margin-right: 20px;
+    background: url("../img/radiobutton-active-tablet.svg") no-repeat;
+  }
 }
 
 .program label {
   position: relative;
+  margin: 0;
+  padding-bottom: 13px;
   line-height: 30px;
   color: #222222;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 12px;
+    line-height: 40px;
+  }
 }
 
 .program::before {
@@ -46,6 +78,10 @@
   padding: 0;
   content: "";
   background: url("../img/Line320.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .program::after {
@@ -58,4 +94,8 @@
   padding: 0;
   content: "";
   background: url("../img/Line320.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

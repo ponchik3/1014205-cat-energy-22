@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css\style.css">
   </head>
   <body class="page">
-    <header class="page__header main-header">
+    <header class="page__header main-header form-main-header">
       <div class="page__logo logo">
         <div class="logo__wrapper">
           <a class="logo__link">
@@ -47,26 +47,30 @@
         </div>
       </section>
       <form class="page-request__form form" action="https://echo.htmlacademy.ru" method="post">
-        <label>
-          ИМЯ:*&nbsp<input type="text" name="name" placeholder="БАРСИК" required>
-        </label>
-        <label>
-          ВЕС (КГ):*&nbsp<input type="text" name="weight" placeholder="7" required>
-        </label>
-        <label>
-          ВОЗРАСТ (ЛЕТ):&nbsp<input type="text" name="age" placeholder="7">
-        </label>
-        <fieldset class="form__program program">
-          <label>
-            <input type="radio" name="program" value="weight-loss" checked> ПОХУДЕНИЕ
-          </label>
-          <label>
-            <input type="radio" name="program" value="weight-gain"> НАБОР МАССЫ
-          </label>
-          <label>
-            <input type="radio" name="program" value="not-know"> НЕ ЗНАЮ (НУЖЕН ВАШ СОВЕТ)
-          </label>
-        </fieldset>
+        <div class="form__basic_data-program-wrapper basic_data-program-wrapper">
+          <fieldset class="form__basic-data basic-data">
+            <label>
+              ИМЯ:*&nbsp<input type="text" name="name" placeholder="БАРСИК" required>
+            </label>
+            <label>
+              ВЕС (КГ):*&nbsp<input type="text" name="weight" placeholder="7" required>
+            </label>
+            <label>
+              ВОЗРАСТ (ЛЕТ):&nbsp<input type="text" name="age" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="form__program program">
+            <label>
+              <input type="radio" name="program" value="weight-loss" checked> ПОХУДЕНИЕ
+            </label>
+            <label>
+              <input type="radio" name="program" value="weight-gain"> НАБОР МАССЫ
+            </label>
+            <label>
+              <input type="radio" name="program" value="not-know"> НЕ ЗНАЮ (НУЖЕН ВАШ СОВЕТ)
+            </label>
+          </fieldset>
+        </div>
         <fieldset class="form__owner-contacts owner-contacts">
           <legend>Контактные данные (владельца кота)</legend>
           <label>
@@ -96,7 +100,7 @@
           </label>
         </fieldset>
         <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
-        <div>* - Обязательные поля</div>
+        <p>* - Обязательные поля</p>
       </form>
       <section class="page-main__contacts contacts">
         <div class="contacts__wrapper">
@@ -107,7 +111,6 @@
             <p>Санкт-Петербург</p>
           </div>
         </div>
-        <img src="img/map.png" alt="карта">
       </section>
     </main>
     <footer class="page__footer main-footer">

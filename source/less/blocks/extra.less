@@ -1,18 +1,40 @@
 .extra {
   border: 0;
-  padding: 0;
+  padding: 0 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 67px 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+    padding: 0 30px 0 110px;
+  }
 }
 
 .extra legend {
   display: block;
   width: 141px;
-  margin-left: 20px;
   margin-bottom: 34px;
   padding-top: 22px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 211px;
+    margin-bottom: 57px;
+    padding-top: 65px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 67px;
+  }
 }
 
 .extra input[type="checkbox"] {
@@ -27,6 +49,13 @@
   margin-right: 16px;
   content: "";
   background: url("../img/checkbox.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 19px;
+    background: url("../img/checkbox-tablet.svg") no-repeat;
+  }
 }
 
 .extra input[type="checkbox"]:checked {
@@ -35,14 +64,27 @@
   height: 30px;
   position: absolute;
   top: -3px;
-  left: -5px;
+  left: -4px;
   margin-right: 16px;
   content: "";
   background: url("../img/checkbox-active.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 19px;
+    background: url("../img/checkbox-active-tablet.svg") no-repeat;
+  }
 }
 
 .extra label {
+  width: 50%;
   position: relative;
+  margin: 0;
   line-height: 30px;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    line-height: 40px;
+  }
 }
