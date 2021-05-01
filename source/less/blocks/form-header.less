@@ -1,6 +1,6 @@
 .form-header {
   display: block;
-  width: 320px;
+  width: 100%;
 }
 
 .form-header__wrapper h1 {
@@ -10,6 +10,18 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    margin-left: 69px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 77px;
+    margin-left: 110px;
+  }
 }
 
 .form-header__wrapper p {
@@ -19,4 +31,16 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    margin-left: 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 56px;
+    margin-left: 110px;
+  }
 }

@@ -1,0 +1,20 @@
+.basic-data {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
+.basic-data label {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.basic-data label:last-of-type {
+  padding-bottom: 0;
+}
