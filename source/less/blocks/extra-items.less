@@ -1,24 +1,69 @@
 .extra-items {
-  width: 320px;
+  width: 100%;
 }
 
 .extra-items h2 {
   margin-top: 25px;
   margin-left: 20px;
+  margin-bottom: 36px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 68px;
+    margin-left: 67px;
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 75px;
+    margin-left: 110px;
+    margin-bottom: 81px;
+  }
+}
+
+.extra-items__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .extra-items__list {
   list-style: none;
   margin: 0 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .extra-item {
   border-top: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding: 15px 0 17px 0;
+  }
 }
 
 .extra-item:last-child {
@@ -31,6 +76,20 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    align-self: center;
+    min-width: 161px;
+    margin: 0;
+  }
 }
 
 .extra-item__table {
@@ -39,6 +98,22 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 225px;
+    position: absolute;
+    right: 38px;
+    top: 30px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 290px;
+    position: relative;
+    top: 10px;
+    left: 0;
+  }
 }
 
 .extra-item__table td {
@@ -51,7 +126,7 @@
 
 .extra-item button {
   display: block;
-  width: 280px;
+  width: 100%;
   height: 40px;
   box-sizing: border-box;
   border: 0;
@@ -68,19 +143,51 @@
   line-height: 20px;
   text-align: center;
   background-color: #68b738;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    margin: 0;
+    margin-left: 28px;
+  }
 }
 
 .extra-items__promo {
-  width: 280px;
+  display: flex;
+  min-width: 280px;
   height: 289px;
   margin: 39px 20px 35px 20px;
   background: #68b738 url("../img/cat_gift.png");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+    margin-top: 62px;
+    margin-bottom: 76px;
+    background: #68b738 url("../img/cat-gift-tablet.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    margin-top: 0;
+    margin-bottom: 86px;
+    margin-left: 80px;
+    background: #68b738 url("../img/cat-gift-desktop.png");
+  }
 }
 
 .extra-items__promo p {
   display: block;
   width: 161px;
   height: 60px;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   padding-top: 186px;
@@ -90,4 +197,17 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 124px;
+    padding-top: 71px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 185px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
