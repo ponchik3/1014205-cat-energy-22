@@ -101,24 +101,34 @@
   width: 280px;
   height: 40px;
   box-sizing: border-box;
-  border: 0;
+  border: none;
   position: relative;
   top: 302px;
   margin: 0 auto;
-  padding: 8px, 44px, 8px, 44px;
+  padding-top: 10px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  text-decoration: none;
   color: #ffffff;
   background-color: #68b738;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
 
   @media (min-width: @tablet-width) {
     width: 244px;
     height: 54px;
-    padding: 14px auto;
+    padding-top: 14px;
     font-size: 20px;
     line-height: 20px;
     position: absolute;

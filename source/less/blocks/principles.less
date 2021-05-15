@@ -54,6 +54,8 @@
 
 .principles__item {
   display: block;
+  min-height: 60px;
+  position: relative;
   margin-left: 100px;
   margin-right: 22px;
   margin-bottom: 26px;
@@ -113,5 +115,48 @@
 .principles__item p {
   @media (min-width: @tablet-width) {
     padding: 142px 29px 57px 0;
+  }
+}
+
+.principles__item::before {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: -80px;
+  content: "";
+  background: url("../img/how-it-works1.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    left: 0;
+    background: url("../img/how-it-works-tablet1.svg") no-repeat;
+  }
+}
+
+.principles__item--two::before {
+  background: url("../img/how-it-works2.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/how-it-works-tablet2.svg") no-repeat;
+  }
+}
+
+.principles__item--three::before {
+  background: url("../img/how-it-works3.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/how-it-works-tablet3.svg") no-repeat;
+  }
+}
+
+.principles__item--four::before {
+  background: url("../img/how-it-works4.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/how-it-works-tablet4.svg") no-repeat;
   }
 }

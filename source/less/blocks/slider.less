@@ -16,7 +16,11 @@
   }
 }
 
-.slider__range::before {
+.slider__range div {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
   display: block;
   width: 311px;
   height: 232px;
@@ -44,6 +48,8 @@
 }
 
 .slider__range {
+  display: grid;
+  grid-template-columns: 75px 100px 75px;
   position: absolute;
   bottom: 31px;
   font-family: "Oswald", sans-serif;
@@ -54,6 +60,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    grid-template-columns: 75px auto 75px;
     bottom: 70px;
     font-size: 20px;
     line-height: 30px;
@@ -66,5 +73,92 @@
     padding: 0;
     bottom: 70px;
     right: 110px;
+  }
+}
+
+.slider__range input {
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.slider__range input:first-of-type {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.slider__range input[type="range"] {
+  display: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.slider__range input:last-of-type {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.slider__range input[type="radio"] {
+  display: none;
+}
+
+.slider__range label {
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.4);
+    //border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    border: none;
+  }
+}
+
+.then:checked ~ div {
+  background: #f2f2f2 url("../img/cat_fat.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/cat-fat-big.png") no-repeat;
+  }
+}
+
+.now:checked ~ div {
+  background: #f2f2f2 url("../img/cat-skinny.png") no-repeat;
+  background-size: contain;
+  background-position-x: center;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/cat-skinny.png") no-repeat;
+    background-size: contain;
+    background-position-x: center;
+  }
+}
+
+.slider__range::before {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: block;
+  width: 84px;
+  height: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  background: url("../img/slider.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 37px;
+    background: url("../img/slider-big.svg") no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
