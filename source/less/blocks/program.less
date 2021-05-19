@@ -1,16 +1,19 @@
 .program {
   border: 0;
-  padding: 0;
+  margin: 24px 0 26px 0;
+  padding: 22px 0 7px 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
-    margin: 52px 67px 0 71px;
+    margin: 52px 67px 75px 71px;
     padding: 25px 28px 13px 28px;
     border: 1px solid #e7e7e7;
   }
 
   @media (min-width: @desktop-width) {
     width: 50%;
-    margin: 0 110px 0 80px;
+    margin: 0 110px 69px 80px;
   }
 }
 
@@ -27,31 +30,54 @@
   margin-right: 16px;
   content: "";
   background: url("../img/radiobutton.svg") no-repeat;
+  background-size: 30px 30px;
 
   @media (min-width: @tablet-width) {
     width: 41px;
     height: 40px;
     margin-right: 20px;
-    background: url("../img/radiobutton-tablet.svg") no-repeat;
+    background-size: 40px 40px;
   }
 }
 
-.program input[type="radio"]:checked {
+.program label:hover {
+  &::before {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 16px;
+    content: "";
+    background: url("../img/radiobutton-hover.svg") no-repeat;
+    background-size: 30px 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 41px;
+      height: 40px;
+      margin-right: 20px;
+      background-size: 40px 40px;
+    }
+  }
+}
+
+input[type="radio"]:checked + label::after {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 14px;
+  height: 14px;
   position: absolute;
-  top: -3px;
-  left: 15px;
-  margin-right: 16px;
+  top: 8px;
+  left: 28px;
   content: "";
   background: url("../img/radiobutton-active.svg") no-repeat;
+  background-size: 14px 14px;
 
   @media (min-width: @tablet-width) {
-    width: 41px;
-    height: 40px;
-    margin-right: 20px;
-    background: url("../img/radiobutton-active-tablet.svg") no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 31px;
+    background-size: 18px 18px;
   }
 }
 
@@ -65,37 +91,5 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 12px;
     line-height: 40px;
-  }
-}
-
-.program::before {
-  display: block;
-  width: 320px;
-  height: 1px;
-  position: relative;
-  margin-top: 24px;
-  margin-bottom: 22px;
-  padding: 0;
-  content: "";
-  background: url("../img/Line320.svg") no-repeat;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.program::after {
-  display: block;
-  width: 320px;
-  height: 1px;
-  position: relative;
-  margin-top: 19px;
-  margin-bottom: 26px;
-  padding: 0;
-  content: "";
-  background: url("../img/Line320.svg") no-repeat;
-
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }

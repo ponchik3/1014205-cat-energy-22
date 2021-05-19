@@ -31,14 +31,12 @@
 }
 
 .form input::placeholder {
-  padding-left: 15px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 45px;
   color: #444444;
 
   @media (min-width: @tablet-width) {
-    padding-left: 19px;
     font-size: 20px;
     line-height: 52px;
   }
@@ -51,10 +49,31 @@ input[type="tel"] {
   height: 46px;
   box-sizing: border-box;
   border: 1px solid #e7e7e7;
+  padding-left: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #444444;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 2px solid #444444;
+  }
 
   @media (min-width: @tablet-width) {
     height: 52px;
+    padding-left: 19px;
+    font-size: 20px;
+    line-height: 52px;
   }
+}
+
+form.submitted input:invalid {
+  border: 2px solid #ff8282;
 }
 
 .form input[type="submit"] {
@@ -64,7 +83,7 @@ input[type="tel"] {
   box-sizing: border-box;
   border: 0;
   position: relative;
-  margin-top: 34px;
+  margin-top: 22px;
   margin-right: auto;
   margin-left: auto;
   bottom: 0;
