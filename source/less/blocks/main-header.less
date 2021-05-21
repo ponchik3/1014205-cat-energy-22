@@ -30,22 +30,17 @@
   }
 }
 
-.logo__link div {
-  display: block;
-  width: 33px;
-  height: 38px;
-  background: url("../img/logo-mobile.svg") no-repeat;
-
+.logo__link img {
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
-    background: url("../img/logo-tablet.svg") no-repeat;
+    content: url("../img/logo-tablet.svg");
   }
 
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
-    background: url("../img/logo-desktop.svg") no-repeat;
+    content: url("../img/logo-desktop.svg");
   }
 }
 
